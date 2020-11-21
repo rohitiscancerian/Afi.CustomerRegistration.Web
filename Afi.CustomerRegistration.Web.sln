@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afi.CustomerRegistration.Web", "Afi.CustomerRegistration.Web\Afi.CustomerRegistration.Web.csproj", "{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afi.CustomerRegistration.Data", "Afi.CustomerRegistration.Data\Afi.CustomerRegistration.Data\Afi.CustomerRegistration.Data.csproj", "{2B4BD56C-8D52-4354-9CD9-AFB330346527}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBB04811-2E2E-4817-9A95-06DF2D677AC3}
+	EndGlobalSection
+EndGlobal
