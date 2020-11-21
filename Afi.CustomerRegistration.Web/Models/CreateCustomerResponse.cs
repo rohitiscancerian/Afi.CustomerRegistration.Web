@@ -7,5 +7,6 @@ namespace Afi.CustomerRegistration.Web.Models
 {
     public class CreateCustomerResponse
     {
+        public int CustomerId { get; set; }
     }
 }

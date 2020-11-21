@@ -13,6 +13,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
+using Newtonsoft.Json;
+using Afi.CustomerRegistration.Web.Validators;
+using FluentValidation;
 
 namespace Afi.CustomerRegistration.Web
 {
@@ -28,9 +31,12 @@ namespace Afi.CustomerRegistration.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            //services.AddEntityFrameworkSqlite();
             services.AddDbContext<CustomerRegistrationContext>();
             services.AddMediatR(typeof(Startup));
+            services.AddControllers();
+            services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,9 +49,7 @@ namespace Afi.CustomerRegistration.Web
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
-
-            app.UseAuthorization();
+            app.UseRouting();        
 
             app.UseEndpoints(endpoints =>
             {

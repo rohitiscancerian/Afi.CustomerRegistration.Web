@@ -13,6 +13,9 @@ namespace Afi.CustomerRegistration.Web.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
+        /// <summary>
+        /// TODO:RK MediatR is a lightweight library for decoupling handling of request from controllers
+        /// </summary>
         private readonly IMediator _mediatr;
 
         public CustomerController(IMediator mediatr)
@@ -21,9 +24,16 @@ namespace Afi.CustomerRegistration.Web.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody] CreateCustomerRequest request)
+        public async Task<IActionResult> Post([FromBody] CreateCustomerRequest request)
         {
+            var response = await _mediatr.Send(request);
+            return Ok(response);
+        }
 
+        [HttpGet]
+        public IActionResult Get()
+        {   
+            return Ok("Hello Customer");
         }
     }
 }
