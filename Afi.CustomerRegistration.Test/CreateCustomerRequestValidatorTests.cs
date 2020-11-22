@@ -70,5 +70,18 @@ namespace Afi.CustomerRegistration.Test
             //Act and Assert
             sut.Validate(createCustomerRequest).IsValid.Should().BeFalse();
         }
+
+        [TestMethod]
+        public void Validate_CreateCustomerRequest_WithAllFieldsBlank_Successfully()
+        {
+            //Arrange
+            var sut = new CreateCustomerRequestValidator();
+            var createCustomerRequest = Utility.GetCreateCustomerRequestWithAllFieldsBlank();
+
+            //Act and Assert
+            sut.Validate(createCustomerRequest).IsValid.Should().BeFalse();
+        }
+
     }
 }
+

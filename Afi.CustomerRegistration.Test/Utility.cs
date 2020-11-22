@@ -58,6 +58,17 @@ namespace Afi.CustomerRegistration.Test
                 Email = "r@s.com"
             };
         }
+        public static CreateCustomerRequest GetCreateCustomerRequestWithAllFieldsBlank()
+        {
+            return new CreateCustomerRequest()
+            {
+                FirstName = "",
+                LastName = "",
+                PolicyReferenceNumber =  "",
+                DateOfBirth = null,
+                Email = ""
+            };
+        }
 
         /// <summary>
         /// TODO:RK I would create more test data to cover 
