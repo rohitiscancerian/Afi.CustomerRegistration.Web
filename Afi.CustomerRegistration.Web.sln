@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afi.CustomerRegistration.Web", "Afi.CustomerRegistration.Web\Afi.CustomerRegistration.Web.csproj", "{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afi.CustomerRegistration.Web", "Afi.CustomerRegistration.Web\Afi.CustomerRegistration.Web.csproj", "{ADB40609-CB6E-4284-B7BB-C2A8D7295F45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afi.CustomerRegistration.Data", "Afi.CustomerRegistration.Data\Afi.CustomerRegistration.Data\Afi.CustomerRegistration.Data.csproj", "{2B4BD56C-8D52-4354-9CD9-AFB330346527}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Afi.CustomerRegistration.Data", "Afi.CustomerRegistration.Data\Afi.CustomerRegistration.Data\Afi.CustomerRegistration.Data.csproj", "{2B4BD56C-8D52-4354-9CD9-AFB330346527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afi.CustomerRegistration.Test", "Afi.CustomerRegistration.Test\Afi.CustomerRegistration.Test.csproj", "{DFF1F956-504B-4C6F-BE87-DE43C4C6B762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B4BD56C-8D52-4354-9CD9-AFB330346527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF1F956-504B-4C6F-BE87-DE43C4C6B762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF1F956-504B-4C6F-BE87-DE43C4C6B762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF1F956-504B-4C6F-BE87-DE43C4C6B762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF1F956-504B-4C6F-BE87-DE43C4C6B762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

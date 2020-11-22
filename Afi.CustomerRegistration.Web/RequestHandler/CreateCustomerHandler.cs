@@ -19,7 +19,13 @@ namespace Afi.CustomerRegistration.Web.RequestHandler
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-
+        /// <summary>
+        /// Not much is happening in handle method but its meant to hold any business logic 
+        /// conditions etc before saving to database
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<CreateCustomerResponse> Handle(CreateCustomerRequest request, CancellationToken cancellationToken)
         {
             var dbCustomer = MapCustomer(request);
@@ -28,7 +34,12 @@ namespace Afi.CustomerRegistration.Web.RequestHandler
 
             return new CreateCustomerResponse() { CustomerId = dbCustomer.Id };
         }
-
+        /// <summary>
+        /// TODO:RK Alternatively, I could have used AutoMapper or similar tool 
+        /// for mapping application layer and db models
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private Customer MapCustomer(CreateCustomerRequest request)
         {
             var customer = new Customer() { 

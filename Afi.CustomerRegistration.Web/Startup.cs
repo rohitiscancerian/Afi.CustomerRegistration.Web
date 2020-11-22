@@ -30,13 +30,13 @@ namespace Afi.CustomerRegistration.Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            //services.AddEntityFrameworkSqlite();
+        {   
             services.AddDbContext<CustomerRegistrationContext>();
             services.AddMediatR(typeof(Startup));
             services.AddControllers();
             services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));           
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +49,10 @@ namespace Afi.CustomerRegistration.Web
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();        
+            app.UseRouting();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "AFI Customer Registration"); });
+
 
             app.UseEndpoints(endpoints =>
             {
